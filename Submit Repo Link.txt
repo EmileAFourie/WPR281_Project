@@ -1,0 +1,3 @@
+HTTPS: 	https://github.com/RuhanPotgieter/WPR281_Project_2022.git
+
+CLI: 		gh repo clone RuhanPotgieter/WPR281_Project_2022

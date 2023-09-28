@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesfolder/menu.css">
+    <script src="./script/app.js" defer>    </script>
+    <script type="text/javascript" src="./script/logic.js"></script>
+    <style type="text/css"></style>
+</head>
+<body>
+    
+    
+    
+    <table style="margin: auto;">
+       
+        <td><div>
+            <button onclick="showpopup()" id="show-popup" class="btn btn-lrg btn-primary btn-block btn-dark btn-outline-light" >
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" t="1551322312294" viewBox="0 0 1024 1024" version="1.1" pId="10297" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+    
+                    </defs>
+                    <path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z" pId="10298">
+    
+                    </path>
+                    <path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z" pId="10299">
+    
+                    </path>
+                </svg>
+            </button>
+            </div>
+        
+    </td>
+    
+    </table>
+    <div>
+        
+        <div id="issuesList" class="popup">
+            <div onclick="hidepopup()" class="close-btn">&times;</div>
+
+
+
+            <div class="form1">
+                <h2 >Ticket</h2>
+                <div class="form1-element">
+                    <label for="summ" >Summary</label>
+                    <input type="text" class="form-control" id="summ" placeholder="Summary of Issue" required autofocus>
+                </div>
+
+                <div class="form1-element">
+                    <label for="details" >Description</label>
+                    <input type="text" id="details" class="form-control" placeholder="Detailed description" required><br>
+                </div>
+
+                <div class="form1-element">
+                    <label for="identifier" >Identified by</label>
+                    <!-- <ul style="list-style: none;"> -->
+                        <!-- <li> -->
+                            <select id="identifier" class="rounded" style="margin-left:115px; width: 143px;">
+                                <option value="">Select Project</option>
+                                <option value="emile">Emile</option>
+                                <option value="damon">Damon</option>
+                                <option value="ruhan">Ruhan</option>
+                                <option value="tamaryn">Tamaryn</option>
+                                
+                            </select><br>
+                        <!-- </li>                       -->
+                    <!-- </ul>  -->
+                </div>
+
+                <div class="form1-element">
+                    <label for="dateID" >Identified on</label>
+                    <input type="date" id="dateID" class="rounded form-control" style="margin-left:112px; width: 143px;" required><br>
+                </div>
+
+                <div class="form1-element">
+                    <label for="projName" >Related to</label>
+                    <!-- <ul style="list-style: none;"> -->
+                        <!-- <li> -->
+                            <select id="projName" class="rounded" style="margin-left:128px ; width: 143px;">
+                                <option value="">Select Project</option>
+                                <option value="alpha">Alpha</option>
+                                <option value="omega">Omega</option>
+                                <option value="beta">Beta</option>
+                                
+                            </select>
+                        <!-- </li>                       -->
+                    <!-- </ul>                  -->
+                </div>
+
+                <div class = "form1-element">
+                    <label for="DevName" >Assigned to</label>
+                    <select id="DevName" class="rounded" style="margin-left:118px ; width: 143px;">
+                        <option value="">Select developer</option>
+                        <option value="emile">Emile</option>
+                        <option value="damon">Damon</option>
+                        <option value="ruhan">Ruhan</option>
+                        <option value="tamaryn">Tamaryn</option>
+
+                    </select>
+                </div>
+                        
+                <div class="form1-element">
+                    <label for="status">Status</label>
+                    <select id="status" class="rounded" style="margin-left:153px ; width: 143px;">
+                        <option value="">Select Status</option>
+                        <option value="open">Open</option>
+                        <option value="resolved">Resolved</option>
+                        <option value="overdue">Overdue</option>
+                    </select><br>
+                </div>
+
+                <div class="form1-element">
+                    <label for="selectPriority" >Priority level</label>
+                    <select id="selectPriority" class="rounded" style="margin-left:114px ; width: 143px;">
+                        <option value="">Select Priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select><br>
+                </div>
+
+                <div class="form1-element">
+                    <label for="targetDate" >Target Resolution Date</label>
+                    <input type="date" id="targetDate" class="rounded form-control" style="margin-left:50px ;" required><br>
+                </div>
+
+                <button type="submit" id="submitButton" class="btn btn-secondary mb-3 btn-group-lg ">Submit</button>
+            </div> 
+            
+        </div>
+
+       <div class="cards">
+
+        <label for="removeKey" style="color:antiquewhite; font-weight:bold; margin-top:5px;"  >Enter ticket number to delete item</label>
+        <input type="text" id="removeKey" placeholder="Remove ticket number" class="rounded form-control" style="margin-top:5px; " required><br>
+        <button id="removeButton" class="btn btn-secondary mb-3 btn-group-lg" style="margin-left:12px;">Remove record</button><br>
+
+        <!-- Confirm which ticket to edit -->
+        <label for="edit" style=" color:antiquewhite; font-weight:bold; margin-left:12px;">Enter the ticket number for the ticket you want to edit</label>
+        <input type="text" style=" margin-left:12px;" class="rounded form-control" id="edit" placeholder="Edit ticket number" required><br>
+        <button  id="editButton" style=" margin-top:5px ; margin-left:12px;" class="btn btn-secondary mb-3 btn-group-lg">Edit ticket</button><br><br>
+
+       </div>
+
+        <!-- Edit ticket -->
+      
+        <div id="ticket" class="popup1">
+            <div onclick="hidepopupedit()" class="close-btn">&times;</div>
+
+            <h2 style="color:antiquewhite;">Edit Ticket</h2>
+
+            <label for="editSumm" style="color:antiquewhite; font-weight:bold;" >Summary</label>
+            <input type="text" id="editSumm" contenteditable="true" class="rounded form-control" style=" margin-left: 102px;" autofocus><br>
+
+            <label for="editDetails" style="color:antiquewhite; font-weight:bold;" >Description</label>
+            <input type="text" id="editDetails" contenteditable="true" class="rounded form-control" style=" margin-left:88px;"><br>
+
+            <label for="editIdentifier" style="color:antiquewhite; font-weight:bold;" >Identified by</label>
+            <input type="text" id="editIdentifier" contenteditable="true" class="rounded form-control" style=" margin-left:78px;"><br>
+
+            <label for="editDateID" style="color:antiquewhite; font-weight:bold;" >Identified on</label>
+            <input type="date" id="editDateID" contenteditable="true" class="rounded form-control" style=" margin-left:78px;"><br>
+
+            <label for="editProject" style="color:antiquewhite; font-weight:bold;" >Related to</label>
+            <input type="text" id="editProject" contenteditable="true" class="rounded form-control" style=" margin-left:97px;"><br>
+
+            <label for="editPerson" style="color:antiquewhite; font-weight:bold;" >Assigned to</label>
+            <input type="text" id="editPerson" contenteditable="true" class="rounded form-control" style=" margin-left:85px;"><br>
+
+            <label for="editStatus" style="color:antiquewhite; font-weight:bold;" >Status</label>
+            <input type="text" id="editStatus" contenteditable="true" class="rounded form-control" style=" margin-left:128px;"><br>
+
+            <label for="editPriority" style="color:antiquewhite; font-weight:bold;" >Priority level</label>
+            <input type="text" id="editPriority" contenteditable="true" class="rounded form-control" style=" margin-left:78px;"><br>
+
+            <label for="editTargetDate" style="color:antiquewhite; font-weight:bold;" >Target Resolution Date</label>
+            <input type="date" id="editTargetDate" contenteditable="true" class="rounded form-control" style=" margin-left:1px;"><br>
+
+            <label for="editActualDate" style="color:antiquewhite; font-weight:bold;" >Actual Resolutio Date</label>
+            <input type="date" id="editActualDate" contenteditable="true" class="rounded form-control" style=" margin-left:11px;" ><br>
+
+            <label for="editResSumm" style="color:antiquewhite; font-weight:bold;" >Resolution Summary</label>
+            <input type="text" id="editResSumm" contenteditable="true" class="rounded form-control" style=" margin-left:16px;"><br>
+
+            <button id="saveButton" class="btn btn-secondary mb-3 btn-group-lg">Save ticket</button><br><br>
+
+        </div>
+        
+
+        <div class="cards" style="margin-top:25px;">
+            <div>
+                <!-- clear all tickets -->
+            <button id="clearButton" class="btn btn-secondary mb-3 btn-group-lg" style="margin-top:10px; margin-left:12px;">Clear all records</button><br>
+    
+            <!-- retrieve specific ticket -->
+            <label for="retrieveKey" style=" color:antiquewhite; font-weight:bold; margin-left:12px;">Enter Key to retrieve item</label>
+            <input type="text" id="retrieveKey" placeholder="Ticket ID" class="rounded form-control" required><br>
+            <button id="retrieveButton" class="btn btn-secondary mb-3 btn-group-lg" style=" margin-left:12px;">Retrieve ticket</button><br>
+    
+            <!-- retrieve all tickets -->
+            <button id="retrieveAllButton" class="btn btn-secondary mb-3 btn-group-lg" style=" margin-left:12px;">Show All</button><br>
+        </div>
+            <p id="output" class="showalltickets" style=" margin-left:12px; margin-top: 35px;">All:</p>
+        </div>
+        
+        
+        <!-- <script src = 'http://chancejs.com/chance.min.js'></script><script
+      src='http://code.jquery.com/jquery-3.2.1.min.js'
+      integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+      crossorigin='anonymous'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script> -->
+
+        <div class="ticket_row row" id="tickets">
+
+        </div>
+
+        <div class="row status_objects">
+            <div class="col-4" id="open">
+                <a style="color:azure" class="status_title">Open: </a>
+            </div>
+            <div class="col-4" id="resolved">
+                <a style="color:azure" class="status_title">Resolved: </a>
+            </div>
+            <div class="col-4" id="overdue">
+                <a style="color:azure" class="status_title">Overdue: </a>
+            </div>
+           
+        </div>
+
+</body>
+
+</html>

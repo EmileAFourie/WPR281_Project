@@ -1,0 +1,297 @@
+.status_objects {
+    padding: 40px;
+}
+
+.status_title {
+    margin-bottom: 20px;
+
+}
+
+td{
+    height: 202px;
+    width: 302px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 25px;
+   
+}
+th{
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 15px;
+}
+table{
+    margin: 0 auto;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.card{
+    background-color: #15181fe0;
+    width: 800px;
+    margin-left: 28px;
+    border: solid 1px #000000;
+    box-shadow: 01px 2px 0 rgba(46, 42, 42, 0.904), 0 2px 25px 0 rgba(255, 255, 255, 0.418);
+    border-radius: 15px;
+    padding: 20px;
+}
+.cards{
+    background-color: #15181fe0;
+    width: 800px;
+    
+    margin-left: 50px;
+    border: solid 1px #000000;
+    box-shadow: 01px 2px 0 rgba(46, 42, 42, 0.904), 0 2px 25px 0 rgba(255, 255, 255, 0.418);
+    border-radius: 15px;
+    padding: 20px;
+}
+li{
+    padding-bottom: 25px;
+    float: left;
+    display: inline;
+    
+
+}
+p{
+    font-weight: bold;
+    color:rgb(255, 254, 254); 
+}
+.space{
+    padding-top: 25px;
+}
+body{
+    background-color: #181b24e0;
+}
+button{
+    box-shadow: 0 2px2px 0 rgb(255, 254, 254), 0 2px 25px 0 rgba(255, 255, 255, 0.418);
+   
+}
+.size{
+    
+    height: 100px;
+    background-color: gray;
+    
+}
+
+#corner{
+    float: bottom;
+    position: absolute;
+}
+.container{
+    width: 200px;
+    height: 100px;
+    background-color: #f8f2f2c4;
+    padding-top: 20px;
+    
+}
+
+.popup{
+   z-index: 999;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    display: none;
+    
+    width: 500px;
+    padding: 20px 30px;
+    background-color: #181C23;
+    box-shadow: 2px 2px 2px 5px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+.popup.active{
+    top: 50%;
+    z-index: 200;
+    opacity:1;
+    transform: translate(-50%, -50%) scale(1.25);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #f8f2f2c4;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+.popup .form1 h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 10px 0px 20px;
+    font-size: 25px;
+    
+}
+.popup .form1 .form1-element{
+    margin: 15px 0px;
+}
+.popup .form1 .form1-element label{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+.popup .form1 .form1-element input[type="text"],
+.popup .form1 .form1-element{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 0px solid #aaa;
+    border-radius: 5px; 
+}
+
+
+.popup .form1 .form1-element input[type="checkbox"]{
+    margin-right: 5px;
+
+}
+.popup .form1 .form1-element button{
+     width: 100%;
+     height: 40px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background: #222;
+        color: #f8f2f2c4;
+        border-radius: 10px;
+        cursor: pointer;
+}
+.form1{
+    border: none;
+}
+.popup1{
+   
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    display: none;
+    
+    width: 500px;
+    padding: 20px 30px;
+    background-color: #181C23;
+    box-shadow: 2px 2px 2px 5px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+.popup1.active{
+    top: 50%;
+    z-index: 200;
+    opacity:1;
+    transform: translate(-50%, -50%) scale(1.25);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+.popup1 .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #f8f2f2c4;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+.popup1 .form1 h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 10px 0px 20px;
+    font-size: 25px;
+    
+}
+.popup1 .form1 .form1-element{
+    margin: 15px 0px;
+}
+.popup1 .form1 .form1-element label{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+.popup1 .form1 .form1-element input[type="text"],
+.popup1 .form1 .form1-element{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 0px solid #aaa;
+    border-radius: 5px; 
+}
+
+.popup1 .form1 .form1-element button{
+     width: 100%;
+     height: 40px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background: #222;
+        color: #f8f2f2c4;
+        border-radius: 10px;
+        cursor: pointer;
+}
+.form1{
+    border: none;
+}
+
+.label_title {
+    font-weight: bold;
+   
+}
+
+.ticket_row{
+    margin-left: 50px;
+    color: #a3a3a3;
+    margin-top: 50px;
+
+}
+
+.ticket_item{
+    background-color: #15181fe0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px 3px 3px 20px rgb(24, 28, 35, 0.4);
+    font-size: 0.8em;
+    padding: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: #9d9d9d;
+}
+
+.ticket_title{
+ font-size: 1.2em;
+ text-align: center;
+ padding-bottom: 20px;
+}
+
+.ticket_item .input {
+    margin-bottom: 10px;
+}
+
+.subsection {
+    border-top: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.subsection_heading {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
